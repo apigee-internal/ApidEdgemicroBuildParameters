@@ -22,7 +22,7 @@ RUN mkdir /install \
 
 RUN \
     (cd /demo; git clone https://github.com/apigee-internal/microgateway.git) \
- && (cd /demo/microgateway; git checkout new-config-start; npm install; npm update) \
+ && (cd /demo/microgateway; git checkout new-config-start; npm install; npm update)
 
 RUN useradd -m -s /bin/bash -p '$1$58lUq/.L$.Fm8ONIXKW1qN.2GpfjL0.' demo \
  && mkdir /var/run/sshd \
