@@ -4,8 +4,8 @@ USER root
 ENV GOPATH /go
 
 COPY apid_config.yaml /demo/config/apid_config.yaml
-COPY startServices /demo/startServices
-RUN chmod +x ./startServices
+COPY startServices.sh /demo/startServices.sh
+RUN chmod +x ./startServices.sh
 
 RUN apt-get update \
   && apt-get -y install curl git glide golang-1.7 openjdk-8-jre-headless openssh-server sudo unzip vim xz-utils
@@ -32,4 +32,4 @@ RUN useradd -m -s /bin/bash -p '$1$58lUq/.L$.Fm8ONIXKW1qN.2GpfjL0.' demo \
  && mkdir /home/demo/.edgemicro \
  && chown demo /home/demo/.edgemicro
 
-CMD [ "/demo/startServices" ]
+CMD [ "/demo/startServices.sh" ]
