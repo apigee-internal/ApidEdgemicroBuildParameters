@@ -5,7 +5,7 @@ ENV GOPATH /go
 
 COPY apid_config.yaml /demo/config/apid_config.yaml
 COPY startServices.sh /demo/startServices.sh
-RUN chmod +x ./startServices.sh
+RUN chmod +x /demo/startServices.sh
 
 RUN apt-get update \
   && apt-get -y install curl git glide golang-1.7 openjdk-8-jre-headless openssh-server sudo unzip vim xz-utils
