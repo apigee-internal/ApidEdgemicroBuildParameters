@@ -1,0 +1,8 @@
+api_port: 9090
+api_expvar_path: nil  # not exposed
+events_buffer_size: 5
+log_level: debug    # valid values: Debug, Info, Warning, Error, Fatal, Panic
+apigeesync_proxy_server_base: https://edgex-internal-prod.e2e.apigee.net/edgex
+apigeesync_snapshot_server_base: https://edgex-internal-prod.e2e.apigee.net/edgex
+apigeesync_change_server_base: https://edgex-internal-prod.e2e.apigee.net/edgex
+apigeesync_snapshot_proto: json
